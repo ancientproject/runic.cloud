@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ancient Package Registry</title>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+
+    <meta name="robots" content="all" />
+    <meta name="keywords" content="nuget ancient vm" />
+    <meta name="author" content="Yuuki Wesp" />
+    <meta name="copyright" content="Yuuki Wesp" />
+    <meta name="yandex" content="noyaca" />
+
+    <meta
+      name="Description"
+      content="Package registry for ancient vm"
+    />
+    <link rel="icon" type="image/png" href="resources/@favicon.png" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+     <% for (var chunk of webpack.chunks) {
+        for (var file of chunk.files) {
+          if (file.match(/\.(js|css)$/)) { %>
+    <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= file %>" as="<%= file.match(/\.css$/)?'style':'script' %>"><% }}} %>
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-performance.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBCYPkz6FL895QYRm4V_J5Ju7kqLCrvie8",
+            authDomain: "runic-cloud.firebaseapp.com",
+            databaseURL: "https://runic-cloud.firebaseio.com",
+            projectId: "runic-cloud",
+            storageBucket: "runic-cloud.appspot.com",
+            messagingSenderId: "509493395641",
+            appId: "1:509493395641:web:4c74ad314c66a56902db68",
+            measurementId: "G-Q3ZWPFW8QY"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        firebase.performance();
+    </script>
+  </body>
+</html>
